@@ -18,105 +18,109 @@
             are not convenient in answering a particular question please skip it by answering "No".
             Every answer would be very appreciated. Thank you for your time.</p>
     </div>
-    <div class="form-item-1">
-        <div class="form_section-1">
-            <div class="form_section">
-                <label for="email" class="item-title">Your email address</label>
-                <input type="email" name="email" id="email" autocomplete="email"
-                       placeholder="email@email.com"
-                       required>
+    <div class="form flex">
+        <div class="form-item-1">
+            <div class="form_section-1">
+                <div class="form_section">
+                    <label for="email" class="item-title">Your email address</label>
+                    <input type="email" name="email" id="email" autocomplete="email"
+                           placeholder="email@email.com"
+                           required>
+                </div>
+                <div class="form_section">
+                    <label for="phone" class="item-title">Your phone number</label>
+                    <input type="tel" name="phone" id="phone" autocomplete="tel"
+                           placeholder="+38012345678" required>
+                </div>
+                <div class="form_section">
+                    <label for="address" class="item-title">Where do you live?</label>
+                    <select id="address" name="address">
+                        <option value="select">Select</option>
+                        <option value="europe">Europe</option>
+                        <option value="asia">Asia</option>
+                        <option value="africa">Africa</option>
+                        <option value="australia">Australia</option>
+                        <option value="north_america">North America</option>
+                        <option value="south_america">South America</option>
+                        <option value="antarctica">Antarctica</option>
+                    </select>
+                </div>
             </div>
             <div class="form_section">
-                <label for="phone" class="item-title">Your phone number</label>
-                <input type="tel" name="phone" id="phone" autocomplete="tel"
-                       placeholder="+38012345678" required>
+                <label class="item-title">Age</label>
+                <ul class="section-age">
+                    <li>
+                        <input type="radio" name="age-radio" value="18-30" id="age1">
+                        <label for="age1">18-30</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="age-radio" value="31-40" id="age2">
+                        <label for="age2">31-40</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="age-radio" value="41-50" id="age3">
+                        <label for="age3">41-50</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="age-radio" value="51+" id="age4">
+                        <label for="age4">51+</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="age-radio" value="0" id="no-age">
+                        <label for="no-age">Prefer not to stay</label>
+                    </li>
+                </ul>
             </div>
             <div class="form_section">
-                <label for="address" class="item-title">Where do you live?</label>
-                <select id="address" name="address">
-                    <option value="select">Select</option>
-                    <option value="europe">Europe</option>
-                    <option value="asia">Asia</option>
-                    <option value="africa">Africa</option>
-                    <option value="australia">Australia</option>
-                    <option value="north_america">North America</option>
-                    <option value="south_america">South America</option>
-                    <option value="antarctica">Antarctica</option>
-                </select>
+                <label class="item-title">What type of place is important to you?</label>
+                <ul class="section-age">
+                    <li>
+                        <input type="checkbox" name="place1" id="room" value="room">
+                        <label for="room">Room</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="place2" id="entire-home" value="entire-home">
+                        <label for="entire-home">Entire home</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="place3" id="hostel" value="hostel">
+                        <label for="hostel">Hostel</label>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="form_section">
-            <label class="item-title">Age</label>
-            <ul class="section-age">
-                <li>
-                    <input type="radio" name="age-radio" value="18-30" id="age1">
-                    <label for="age1">18-30</label>
-                </li>
-                <li>
-                    <input type="radio" name="age-radio" value="31-40" id="age2">
-                    <label for="age2">31-40</label>
-                </li>
-                <li>
-                    <input type="radio" name="age-radio" value="41-50" id="age3">
-                    <label for="age3">41-50</label>
-                </li>
-                <li>
-                    <input type="radio" name="age-radio" value="51+" id="age4">
-                    <label for="age4">51+</label>
-                </li>
-                <li>
-                    <input type="radio" name="age-radio" value="0" id="no-age">
-                    <label for="no-age">Prefer not to stay</label>
-                </li>
-            </ul>
+        <div class="flex form-item-2">
+            <div class="form_section">
+                <label class="item-title">Have you ever searched an apartment before?</label>
+                <ul class="section-age">
+                    <li>
+                        <input type="radio" name="experience" id="experience" value="yes">
+                        <label for="experience">Yes</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="experience" id="inexperience" value="no">
+                        <label for="inexperience">No</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="form_section">
+                <label for="reason" class="item-title">What do you expect when there is a reason to
+                    find
+                    an apartment on
+                    the
+                    website? Please be elaborate.</label>
+                <textarea id="reason" name="reason" placeholder="Wright something"></textarea>
+            </div>
+            <div class="form_section form_section-1">
+                <label for="challenges" class="item-title">What are some of the challenges you may
+                    face
+                    when you find an
+                    apartment on
+                    the website?</label>
+                <input id="challenges" name="challenges" placeholder="Wright something"></input>
+            </div>
+            <button type="submit">Submit Form</button>
         </div>
-        <div class="form_section">
-            <label class="item-title">What type of place is important to you?</label>
-            <ul class="section-age">
-                <li>
-                    <input type="checkbox" name="place1" id="room" value="room">
-                    <label for="room">Room</label>
-                </li>
-                <li>
-                    <input type="checkbox" name="place2" id="entire-home" value="entire-home">
-                    <label for="entire-home">Entire home</label>
-                </li>
-                <li>
-                    <input type="checkbox" name="place3" id="hostel" value="hostel">
-                    <label for="hostel">Hostel</label>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="flex">
-        <div class="form_section">
-            <label class="item-title">Have you ever searched an apartment before?</label>
-            <ul class="section-age">
-                <li>
-                    <input type="radio" name="experience" id="experience" value="yes">
-                    <label for="experience">Yes</label>
-                </li>
-                <li>
-                    <input type="radio" name="experience" id="inexperience" value="no">
-                    <label for="inexperience">No</label>
-                </li>
-            </ul>
-        </div>
-        <div class="form_section">
-            <label for="reason" class="item-title">What do you expect when there is a reason to find
-                an apartment on
-                the
-                website? Please be elaborate.</label>
-            <textarea id="reason" name="reason" placeholder="Wright something"></textarea>
-        </div>
-        <div class="form_section form_section-1">
-            <label for="challenges" class="item-title">What are some of the challenges you may face
-                when you find an
-                apartment on
-                the website?</label>
-            <input id="challenges" name="challenges" placeholder="Wright something"></input>
-        </div>
-        <button type="submit">Submit Form</button>
     </div>
 </form>
 </body>

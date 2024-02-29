@@ -45,10 +45,6 @@ label:has(~ [required])::after {
     padding: 1rem 0 0.4rem 0;
 }
 
-.form-item-1 {
-    padding-top: 1rem;
-}
-
 .form_section {
     display: flex;
     flex-direction: column;
@@ -69,6 +65,7 @@ label:has(~ [required])::after {
 
 input::placeholder, textarea::placeholder {
     color: #34A265;
+    font-size: 0.8rem;
 }
 
 .form_section select {
@@ -154,7 +151,7 @@ input[type="checkbox"]:checked {
 
 textarea {
     resize: vertical;
-    height: 6rem;
+    height: 10rem;
     border-radius: 8px;
     font-family: inherit;
     padding: 1rem;
@@ -175,4 +172,21 @@ button {
 .flex {
     display: flex;
     flex-direction: column;
+}
+
+@media (min-width: 43rem) {
+    .form {
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap: 2rem;
+    }
+
+    .form-item-1, .form-item-2 {
+        width: 50%;
+    }
+
+    form {
+        max-width: 66rem;
+        padding: 1rem 5rem;
+    }
 }
