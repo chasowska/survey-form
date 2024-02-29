@@ -25,17 +25,19 @@
                     <label for="email" class="item-title">Your email address</label>
                     <input type="email" name="email" id="email" autocomplete="email"
                            placeholder="email@email.com"
+                           pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+"
                            required>
                 </div>
                 <div class="form_section">
                     <label for="phone" class="item-title">Your phone number</label>
                     <input type="tel" name="phone" id="phone" autocomplete="tel"
-                           placeholder="+38012345678" required>
+                           placeholder="+38012345678" required
+                           title="Please use Ukrainian phone number starting from +380 or omit +38 e.g. 0970088999"
+                           pattern="^(\+38)?0[0-9]{9}$">
                 </div>
                 <div class="form_section">
                     <label for="address" class="item-title">Where do you live?</label>
                     <select id="address" name="address">
-                        <option value="select">Select</option>
                         <option value="europe">Europe</option>
                         <option value="asia">Asia</option>
                         <option value="africa">Africa</option>
@@ -66,8 +68,8 @@
                         <label for="age4">51+</label>
                     </li>
                     <li>
-                        <input type="radio" name="age-radio" value="0" id="no-age">
-                        <label for="no-age">Prefer not to stay</label>
+                        <input type="radio" name="age-radio" value="0" id="no-age" checked>
+                        <label for="no-age">Prefer not to say</label>
                     </li>
                 </ul>
             </div>
@@ -109,7 +111,8 @@
                     an apartment on
                     the
                     website? Please be elaborate.</label>
-                <textarea id="reason" name="reason" placeholder="Wright something"></textarea>
+                <textarea id="reason" maxlength="500" name="reason"
+                          placeholder="Wright something"></textarea>
             </div>
             <div class="form_section form_section-1">
                 <label for="challenges" class="item-title">What are some of the challenges you may
@@ -117,7 +120,8 @@
                     when you find an
                     apartment on
                     the website?</label>
-                <input id="challenges" name="challenges" placeholder="Wright something"></input>
+                <input id="challenges" maxlength="50" name="challenges"
+                       placeholder="Wright something"></input>
             </div>
             <button type="submit">Submit Form</button>
         </div>
